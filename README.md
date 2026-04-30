@@ -3,6 +3,7 @@
 Coordination repo for docs, planning, and multi-repo orchestration.
 
 ## Linked Repositories
+
 - app-backend-manageaze
 - app-frontend-manageaze
 - manageaze-prototype
@@ -21,6 +22,7 @@ Run this before starting work:
 `./scripts/reconcile.sh`
 
 What it does:
+
 - Ensures umbrella + submodules are clean (fails fast if someone forgot to commit/stash)
 - Pulls umbrella with `--ff-only`
 - Syncs and updates all submodules to remote `main`
@@ -38,7 +40,9 @@ Run this anytime to see umbrella + each submodule status:
 `./scripts/status-all.sh`
 
 It prints:
+
 - branch + short commit for umbrella and each submodule
 - upstream tracking + ahead/behind counts
 - dirty files (if any)
 - current submodule pointer SHAs
+
