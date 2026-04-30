@@ -10,3 +10,6 @@
 	path = manageaze-prototype
 	url = git@github.com:saadhsnain/manageaze.git
 	branch = main
+[submodule "manageaze-mobile-app"]
+	path = manageaze-mobile-app
+	url = git@github.com:adeemadil/manageaze-mobile-app.git
