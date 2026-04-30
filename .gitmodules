@@ -1,0 +1,12 @@
+[submodule "app-backend-manageaze"]
+	path = app-backend-manageaze
+	url = git@github.com:sdVakil/app-backend-manageaze.git
+	branch = main
+[submodule "app-frontend-manageaze"]
+	path = app-frontend-manageaze
+	url = git@github.com:sdVakil/app-frontend-manageaze.git
+	branch = main
+[submodule "manageaze-prototype"]
+	path = manageaze-prototype
+	url = git@github.com:saadhsnain/manageaze.git
+	branch = main
