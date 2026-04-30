@@ -51,28 +51,28 @@ Some clients will run ManagEaze on their own infrastructure. **Do not build anyt
 
 ## Platform Stack (Production Ready)
 
-| Layer | Production | Source |
-| --- | --- | --- |
-| Frontend | Next.js (React) | Confirmed — `/_next/` bundles + `__NEXT_DATA__` |
-| Styling | Tailwind CSS + Emotion | Confirmed — class names + `data-emotion` in HTML |
-| Font | Roboto Flex (use DM Sans instead) | Confirmed — font variable in HTML |
-| State management | Redux + Redux Persist | Confirmed — `persist:root` in localStorage |
-| Frontend host | `app.manageaze.com` | Confirmed |
-| Backend framework | **Node.js + Express** | Confirmed — `x-powered-by: Express` response header |
-| Web server | nginx/1.24.0 on Ubuntu | Confirmed — `server: nginx/1.24.0 (Ubuntu)` response header |
-| Backend host | `server.manageaze.com` | Confirmed |
-| API base path | `/manageaze/api/` | Confirmed — `/manageaze/api/user/login`, `/manageaze/api/policies` |
-| Real-time | **Socket.IO** (WebSockets) | Confirmed — `socket.io` polling on `server.manageaze.com` |
-| Auth | **Token-based via Redux Persist** — no cookies | Confirmed — empty `document.cookie`; `persist:root` in localStorage; CORS allows `Authorization`, `x-auth-token`, `x-access-token` headers |
-| Database | **MongoDB** | Confirmed — all IDs are Mongo ObjectIds |
-| Hosting | AWS |  |
-| Storage | **AWS S3** — bucket `manageaze-frontend-s3bucket`, region `us-east-2` | Confirmed via `logoURL` in company object |
+
+| Layer             | Production                                                            | Source                                                                                                                                     |
+| ----------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Frontend          | Next.js (React)                                                       | Confirmed — `/_next/` bundles + `__NEXT_DATA__`                                                                                            |
+| Styling           | Tailwind CSS + Emotion                                                | Confirmed — class names + `data-emotion` in HTML                                                                                           |
+| Font              | Roboto Flex (use DM Sans instead)                                     | Confirmed — font variable in HTML                                                                                                          |
+| State management  | Redux + Redux Persist                                                 | Confirmed — `persist:root` in localStorage                                                                                                 |
+| Frontend host     | `app.manageaze.com`                                                   | Confirmed                                                                                                                                  |
+| Backend framework | **Node.js + Express**                                                 | Confirmed — `x-powered-by: Express` response header                                                                                        |
+| Web server        | nginx/1.24.0 on Ubuntu                                                | Confirmed — `server: nginx/1.24.0 (Ubuntu)` response header                                                                                |
+| Backend host      | `server.manageaze.com`                                                | Confirmed                                                                                                                                  |
+| API base path     | `/manageaze/api/`                                                     | Confirmed — `/manageaze/api/user/login`, `/manageaze/api/policies`                                                                         |
+| Real-time         | **Socket.IO** (WebSockets)                                            | Confirmed — `socket.io` polling on `server.manageaze.com`                                                                                  |
+| Auth              | **Token-based via Redux Persist** — no cookies                        | Confirmed — empty `document.cookie`; `persist:root` in localStorage; CORS allows `Authorization`, `x-auth-token`, `x-access-token` headers |
+| Database          | **MongoDB**                                                           | Confirmed — all IDs are Mongo ObjectIds                                                                                                    |
+| Hosting           | AWS                                                                   |                                                                                                                                            |
+| Storage           | **AWS S3** — bucket `manageaze-frontend-s3bucket`, region `us-east-2` | Confirmed via `logoURL` in company object                                                                                                  |
+
 
 > The prototype is also available for reference. It is instead built in React/TypeScript/Supabase. The production frontend is also React (Next.js) so component patterns, hooks, and TypeScript types transfer almost directly.
-> 
 
 > For production ready platform, the backend is a **separate Node.js/Express service** on `server.manageaze.com` — not Next.js API routes. All new endpoints must follow the `/manageaze/api/` path convention.
-> 
 
 ### Auth — How It Works
 
@@ -118,6 +118,7 @@ The backend CORS is currently locked to `https://app.manageaze.com`. Before any 
 ### Socket.IO — Important for Mobile
 
 Socket.IO is used for real-time updates. The mobile app must handle this:
+
 - Use `socket.io-client` (works in React Native)
 - Connect to `wss://server.manageaze.com/socket.io/`
 - Pass the auth token as a handshake parameter: `io(url, { auth: { token } })`
@@ -129,19 +130,21 @@ Socket.IO is used for real-time updates. The mobile app must handle this:
 
 The prototype codebase is available for your review. Key files and areas:
 
-| What | Where in prototype |
-| --- | --- |
-| Governance data types | `src/types/governance.ts` |
-| Governance state & logic | `src/hooks/useGovernance.ts` |
-| Governance routes | `src/App.tsx` (all `/governance/*` routes) |
-| TOR form fields | `src/components/governance/TorForm.tsx` |
-| TOR review / approval UI | `src/pages/governance/TorReview.tsx` |
-| Committee hierarchy | `src/components/governance/CommitteeTree.tsx` |
-| Meeting minutes | `src/pages/governance/MeetingMinutes.tsx` |
-| Voting interface | `src/pages/governance/VotingDecisions.tsx` |
-| Policy editor (markdown) | `src/components/policy/PolicyEditor.tsx` |
+
+| What                     | Where in prototype                                                    |
+| ------------------------ | --------------------------------------------------------------------- |
+| Governance data types    | `src/types/governance.ts`                                             |
+| Governance state & logic | `src/hooks/useGovernance.ts`                                          |
+| Governance routes        | `src/App.tsx` (all `/governance/`* routes)                            |
+| TOR form fields          | `src/components/governance/TorForm.tsx`                               |
+| TOR review / approval UI | `src/pages/governance/TorReview.tsx`                                  |
+| Committee hierarchy      | `src/components/governance/CommitteeTree.tsx`                         |
+| Meeting minutes          | `src/pages/governance/MeetingMinutes.tsx`                             |
+| Voting interface         | `src/pages/governance/VotingDecisions.tsx`                            |
+| Policy editor (markdown) | `src/components/policy/PolicyEditor.tsx`                              |
 | Policy approval workflow | `src/components/policy/WorkflowSidebar.tsx`, `ApprovalConditions.tsx` |
-| Activity logging | `src/lib/activity-logger.ts` |
+| Activity logging         | `src/lib/activity-logger.ts`                                          |
+
 
 The prototype governance features use **in-memory state only** (no database persistence). Building the MongoDB schema and wiring it up is the core of Milestone 2.
 
@@ -406,15 +409,17 @@ Port the prototype governance UI to the production Next.js app. Since both the p
 
 ### Features to port
 
-| Feature | Prototype Reference | Notes |
-| --- | --- | --- |
-| Governance Dashboard | `GovernanceDashboard.tsx` | Framework overview, committee tree, TOR status |
-| Framework Wizard | `FrameworkWizard.tsx` | Guided framework setup |
-| Committee Management | `CommitteeTree.tsx`, `CommitteeForm.tsx` | Hierarchical L1-L5 structure |
-| Org Chart | `OrgChart.tsx` | Visual organizational hierarchy |
-| TOR Editor | `TorEditor.tsx`, `TorForm.tsx` | Markdown editor (see Part D for editor spec) |
-| TOR Preview | `TorPreview.tsx` | Print-ready document view |
-| TOR Review | `TorReview.tsx` | 4-tab approval interface |
+
+| Feature              | Prototype Reference                      | Notes                                          |
+| -------------------- | ---------------------------------------- | ---------------------------------------------- |
+| Governance Dashboard | `GovernanceDashboard.tsx`                | Framework overview, committee tree, TOR status |
+| Framework Wizard     | `FrameworkWizard.tsx`                    | Guided framework setup                         |
+| Committee Management | `CommitteeTree.tsx`, `CommitteeForm.tsx` | Hierarchical L1-L5 structure                   |
+| Org Chart            | `OrgChart.tsx`                           | Visual organizational hierarchy                |
+| TOR Editor           | `TorEditor.tsx`, `TorForm.tsx`           | Markdown editor (see Part D for editor spec)   |
+| TOR Preview          | `TorPreview.tsx`                         | Print-ready document view                      |
+| TOR Review           | `TorReview.tsx`                          | 4-tab approval interface                       |
+
 
 ### Approval Workflow for Governance Framework
 
@@ -423,6 +428,7 @@ This does not exist in the prototype and must be built. Model it after the polic
 **States**: `draft → submitted → under_review → approved | rejected`
 
 **Rules**:
+
 - Only the framework creator or an L1 committee member can submit for approval
 - Approval requires sign-off from all designated approvers (configurable per framework)
 - Any approver can reject; rejection requires a comment and returns to `draft`
@@ -430,6 +436,7 @@ This does not exist in the prototype and must be built. Model it after the polic
 - Full approval log (who approved/rejected, when, comment) persisted to `governance_frameworks` collection
 
 **UI Components needed**:
+
 - Framework submission button (visible to creator/L1 admin only)
 - Approval panel (list of required approvers + their status)
 - Rejection modal with required comment field
@@ -464,6 +471,7 @@ Build a reusable Markdown editor component for the production Next.js app, model
 - **Word count**: Display live word count in the toolbar
 
 This component will be used in:
+
 - TOR Purpose, Roles & Responsibilities, Agenda sections
 - Meeting minutes capture
 - Any future long-form content fields
@@ -472,23 +480,25 @@ This component will be used in:
 
 The governance module needs a clear permission layer. Map committee roles to actions:
 
-| Action | Organization Admin | L1 Committee Member | Chairperson | Committee Member | Viewer |
-| --- | --- | --- | --- | --- | --- |
-| Create framework | ✓ | ✓ | — | — | — |
-| Submit framework for approval | ✓ | ✓ | — | — | — |
-| Approve framework | ✓ | ✓ (if designated) | — | — | — |
-| Create committee | ✓ | ✓ | — | — | — |
-| Edit TOR | ✓ | ✓ | ✓ | — | — |
-| Approve TOR | ✓ | ✓ (if designated) | ✓ (if designated) | — | — |
-| Create meeting | ✓ | ✓ | ✓ | — | — |
-| Publish minutes | ✓ | ✓ | ✓ | — | — |
-| Cast vote | ✓ | ✓ | ✓ | ✓ | — |
-| View published content | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+| Action                        | Organization Admin | L1 Committee Member | Chairperson       | Committee Member | Viewer |
+| ----------------------------- | ------------------ | ------------------- | ----------------- | ---------------- | ------ |
+| Create framework              | ✓                  | ✓                   | —                 | —                | —      |
+| Submit framework for approval | ✓                  | ✓                   | —                 | —                | —      |
+| Approve framework             | ✓                  | ✓ (if designated)   | —                 | —                | —      |
+| Create committee              | ✓                  | ✓                   | —                 | —                | —      |
+| Edit TOR                      | ✓                  | ✓                   | ✓                 | —                | —      |
+| Approve TOR                   | ✓                  | ✓ (if designated)   | ✓ (if designated) | —                | —      |
+| Create meeting                | ✓                  | ✓                   | ✓                 | —                | —      |
+| Publish minutes               | ✓                  | ✓                   | ✓                 | —                | —      |
+| Cast vote                     | ✓                  | ✓                   | ✓                 | ✓                | —      |
+| View published content        | ✓                  | ✓                   | ✓                 | ✓                | ✓      |
+
 
 **Important**: the production platform has two separate permission concepts that must not be conflated:
 
-1. **`user.accessLevel`** — platform-wide permissions. A MongoDB document with `level: Number` (0 = Super User, higher = lower privilege) and `actions: [String]` (e.g. `"Committee Editor"`, `"Policy Workflow Creator"`). This gates whether a user can access governance features at all.
-2. **`committees.members[].role`** — committee-specific role (chairperson, member, approver, etc.). This gates what a user can do *within* a specific committee.
+1. `**user.accessLevel`** — platform-wide permissions. A MongoDB document with `level: Number` (0 = Super User, higher = lower privilege) and `actions: [String]` (e.g. `"Committee Editor"`, `"Policy Workflow Creator"`). This gates whether a user can access governance features at all.
+2. `**committees.members[].role`** — committee-specific role (chairperson, member, approver, etc.). This gates what a user can do *within* a specific committee.
 
 Governance middleware must check both: `accessLevel.actions` first (can this user touch governance at all?), then `committee.members[].role` (can they perform this specific action in this committee?).
 
@@ -522,6 +532,7 @@ Meeting held
 ### Transcription
 
 Support three input modes:
+
 1. **File upload**: MP3/MP4/WAV → transcribe via Whisper API (self-hostable: `openai/whisper` via `whisper.cpp` or `faster-whisper`)
 2. **Text paste / document upload**: Secretary pastes raw transcript text or uploads .txt/.docx
 3. **Integration (future)**: Zoom/Teams meeting URL — out of scope for now, design the integration point but don’t implement
@@ -531,6 +542,7 @@ Whisper must be abstracted: `TranscriptionProvider` interface with a `WhisperPro
 ### AI Processing
 
 After transcription, call an LLM to extract:
+
 - **Executive summary** (3–5 sentences)
 - **Action items**: each item includes description, suggested assignee (matched to committee members), suggested due date
 - **Key decisions made**
@@ -567,12 +579,12 @@ Use structured output / JSON mode when calling the LLM so the response parses re
 After the secretary reviews and publishes:
 
 - A **Meeting Report** page per meeting showing:
-    - Date, committee, attendees
-    - AI-generated summary (with “AI generated” label)
-    - Action items table (assignee, due date, status — trackable after the fact)
-    - Decisions log
-    - Voting outcomes
-    - Link to full minutes (Markdown rendered)
+  - Date, committee, attendees
+  - AI-generated summary (with “AI generated” label)
+  - Action items table (assignee, due date, status — trackable after the fact)
+  - Decisions log
+  - Voting outcomes
+  - Link to full minutes (Markdown rendered)
 - A **Committee Meeting History** view: all past meetings for a committee, searchable
 - Action items feed: cross-committee view of all open action items assigned to the logged-in user
 
@@ -585,6 +597,7 @@ If no recording is available, the secretary can fill in the meeting fields manua
 ## Part A — Electronic Voting
 
 Extend the Milestone 2 voting system with formal electronic voting workflows:
+
 - Vote by committee member (one vote per member, recorded with timestamp)
 - Voting open/close dates enforced server-side
 - Quorum check: voting closes as passed/rejected only if quorum is met
@@ -597,13 +610,15 @@ Extend the Milestone 2 voting system with formal electronic voting workflows:
 
 Pairs with the mobile app to notify the users based on the setup. The prototype has a proof-of-concept at `src/pages/governance/TaskAutomation.tsx`. Build the real thing:
 
-| Automation | Trigger | Action |
-| --- | --- | --- |
-| TOR renewal reminder | TOR `approved_at` + renewal interval | Notify chairperson 30/15/7 days before expiry |
-| Overdue approval escalation | Approval pending > N days (configurable) | Notify next level up + log escalation |
-| Action item follow-up | Action item `due_date` approaching | Notify assigned user 3 days before |
-| Meeting minutes overdue | Meeting `held_at` + 48h, no published minutes | Notify secretary |
-| Committee quorum alert | Meeting quorum not met at scheduled time | Notify chairperson |
+
+| Automation                  | Trigger                                       | Action                                        |
+| --------------------------- | --------------------------------------------- | --------------------------------------------- |
+| TOR renewal reminder        | TOR `approved_at` + renewal interval          | Notify chairperson 30/15/7 days before expiry |
+| Overdue approval escalation | Approval pending > N days (configurable)      | Notify next level up + log escalation         |
+| Action item follow-up       | Action item `due_date` approaching            | Notify assigned user 3 days before            |
+| Meeting minutes overdue     | Meeting `held_at` + 48h, no published minutes | Notify secretary                              |
+| Committee quorum alert      | Meeting quorum not met at scheduled time      | Notify chairperson                            |
+
 
 Automations run as scheduled jobs (cron). Must be self-hostable — use a simple job queue (BullMQ with Redis, or a cron table in MongoDB). No AWS SQS, no Temporal unless you’re already running it.
 
@@ -614,20 +629,24 @@ A real-time executive dashboard visible to users whose `accessLevel.level` is 0 
 ### Panels
 
 **Governance Health**
+
 - Frameworks: X active, Y pending approval
 - Committees: total count, committees missing TOR, committees with overdue TOR renewal
 - Meetings: meetings held this quarter vs. required (per TOR frequency)
 
 **Policy Compliance**
+
 - Policies: approved count, in-review count, overdue for renewal
 - Quiz completion rate by department (if quiz module is active)
 
 **Action Items**
+
 - Open action items by committee
 - Overdue action items (past due date)
 - Completion rate this month
 
 **Voting Record**
+
 - Votes held this quarter
 - Pass/fail/withdrawn breakdown
 - Participation rate (% of eligible voters who voted)
@@ -690,11 +709,13 @@ REDIS_URL=redis://localhost:6379
 
 ## Appendix B — Milestone Summary
 
-| Milestone | Core Deliverable | Key Risk |
-| --- | --- | --- |
-| 1 — Mobile App | Native iOS/Android policy viewer | API design must be extensible for governance features in later milestones |
-| 2 — Governance Architecture | MongoDB schema + Next.js governance module + AI meeting intelligence | LLM provider abstraction is critical for self-deployment clients |
-| 3 — Task Automation & Compliance Dashboard | Automated jobs + executive dashboard | Scope may shift based on M2 findings — confirm before kickoff |
+
+| Milestone                                  | Core Deliverable                                                     | Key Risk                                                                  |
+| ------------------------------------------ | -------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 1 — Mobile App                             | Native iOS/Android policy viewer                                     | API design must be extensible for governance features in later milestones |
+| 2 — Governance Architecture                | MongoDB schema + Next.js governance module + AI meeting intelligence | LLM provider abstraction is critical for self-deployment clients          |
+| 3 — Task Automation & Compliance Dashboard | Automated jobs + executive dashboard                                 | Scope may shift based on M2 findings — confirm before kickoff             |
+
 
 ---
 

@@ -24,7 +24,7 @@ todos:
     content: "Phase 0: Rename app-backend-manageaze/env -> .env.development; verify .gitignore in both prod repos covers .env*; user has already corrected the swap"
     status: pending
   - id: p0-umbrella-init
-    content: "Phase 0: Initialize the umbrella git workspace (adeemadilkhatri/manageaze-workspace, private) using submodules with branch=main for the 3 sub-repos. Pre-flight clean-state check on each existing local clone, convert to submodules without losing local state, write umbrella .gitignore + README.md, push to GitHub, fresh-clone smoke test. See plan \u00a77 for full migration steps."
+    content: "Phase 0: Initialize the umbrella git workspace (adeemadilkhatri/manageaze-workspace, private) using submodules with branch=main for the 3 sub-repos. Pre-flight clean-state check on each existing local clone, convert to submodules without losing local state, write umbrella .gitignore + README.md, push to GitHub, fresh-clone smoke test. See plan §7 for full migration steps."
     status: pending
   - id: p1-organize-prototype
     content: "Phase 1: Organize prototype in place (fix OrgChart re-export, guard TaskAutomation/MeetingIntegrationCard placeholders, remove hardcoded currentUserId, align governance.ts field names to PRD camelCase, Tiptap migration RFC-001, out-of-scope flagging)"
@@ -135,8 +135,8 @@ flowchart LR
 
 User initially shared two env files in swapped locations; they have since been moved back to the correct repos. Current verified placement (full redacted analysis goes into `docs/SECRETS.md` as a Phase 0 deliverable):
 
-- `[app-backend-manageaze/env](app-backend-manageaze/env)` — backend keys (`PORT`, `MONGO_URI`, `JWT_SECRET`, `SENDGRID_API_KEY`, `AWS_*`, `OPENAI_API_KEY`, `STRIPE_SECRET_KEY`, `PINECONE_API_KEY`, Anchor `ACME_*`). **Correct repo, but filename should be renamed to `.env.development` and added to `.gitignore`.**
-- `[app-frontend-manageaze/.env.development](app-frontend-manageaze/.env.development)` — frontend keys (`NEXT_PUBLIC_API_BASE_URL`, `NEXT_PUBLIC_AI_MODULE_BASE_URL`, `NEXT_PUBLIC_S3_`*, `NEXT_PUBLIC_AWS_*`, `NEXT_PUBLIC_OPENAI_API_KEY`, `NEXT_PUBLIC_API_SOCKET_BASE_URL`, `NEXT_PUBLIC_MODE`). Filename is correct; needs `.gitignore` verification.
+- `[app-backend-manageaze/env](app-backend-manageaze/env)` — backend keys (`PORT`, `MONGO_URI`, `JWT_SECRET`, `SENDGRID_API_KEY`, `AWS_`*, `OPENAI_API_KEY`, `STRIPE_SECRET_KEY`, `PINECONE_API_KEY`, Anchor `ACME_*`). **Correct repo, but filename should be renamed to `.env.development` and added to `.gitignore`.**
+- `[app-frontend-manageaze/.env.development](app-frontend-manageaze/.env.development)` — frontend keys (`NEXT_PUBLIC_API_BASE_URL`, `NEXT_PUBLIC_AI_MODULE_BASE_URL`, `NEXT_PUBLIC_S3_`*, `NEXT_PUBLIC_AWS_`*, `NEXT_PUBLIC_OPENAI_API_KEY`, `NEXT_PUBLIC_API_SOCKET_BASE_URL`, `NEXT_PUBLIC_MODE`). Filename is correct; needs `.gitignore` verification.
 
 Confirmed open questions answers (from this session): env-file placement is now correct (user re-swapped). Secret rotation is owned by **Saad V.** — Phase 2 is gated on his confirmation.
 
@@ -148,7 +148,7 @@ Confirmed open questions answers (from this session): env-file placement is now 
 | P0       | AWS access key + secret in `NEXT_PUBLIC_`* (browser-exposed)                                      | frontend env | Rotate AWS keys; move S3 access server-side via signed URLs from backend                     |
 | P0       | OpenAI key in `NEXT_PUBLIC_OPENAI_API_KEY` (browser-exposed)                                      | frontend env | Rotate OpenAI key; route AI calls through backend or the policy-maker service                |
 | P0       | Same AWS key pair reused on backend AND frontend                                                  | both         | Issue separate IAM users (e.g. `manageaze-backend-s3-rw`, `manageaze-frontend-presign-only`) |
-| P0       | `STRIPE_SECRET_KEY=sk_live_*` in a dev env file                                                   | backend env  | Rotate live key; replace dev value with `sk_test_*`                                          |
+| P0       | `STRIPE_SECRET_KEY=sk_live_`* in a dev env file                                                   | backend env  | Rotate live key; replace dev value with `sk_test_*`                                          |
 | P0       | `JWT_SECRET=manageaze-secret` (weak, guessable)                                                   | backend env  | Replace with 256-bit random; rotation invalidates existing tokens — coordinate with Saad     |
 | P1       | SendGrid + Pinecone keys committed                                                                | backend env  | Rotate; move to secret manager when self-host story lands                                    |
 | P1       | MongoDB Atlas creds in `MONGO_URI` (plaintext)                                                    | backend env  | Acceptable in env file; confirm `.gitignore` and git-history are clean                       |
@@ -431,7 +431,7 @@ Goal: Port prototype governance module to production stack, wire to MongoDB, bui
 
 **3C — UI (frontend port):**
 
-- Port pages to `[app-frontend-manageaze/src/pages/governance/](app-frontend-manageaze/src/pages/governance)*` using MUI. Prototype → Production map:
+- Port pages to `[app-frontend-manageaze/src/pages/governance/](app-frontend-manageaze/src/pages/governance)`* using MUI. Prototype → Production map:
   - `GovernanceDashboard.tsx` → `/governance/dashboard`
   - `FrameworkWizard.tsx` → `/governance/frameworks/new`
   - `CommitteeTree.tsx` → embedded component
@@ -651,18 +651,21 @@ After Phase 0 exit criteria are met, we enter Phase 1 and start organizing the p
 
 ### 7.1 Current git state (verified 2026-04-30)
 
-| Folder                                                                  | Repo? | Remote                                                | Owner    | HEAD on `main`                                                                       |
-| ----------------------------------------------------------------------- | ----- | ----------------------------------------------------- | -------- | ------------------------------------------------------------------------------------ |
-| `[ManagEaze/](.)` (workspace root)                                      | NO    | —                                                     | (us)     | —                                                                                    |
-| `[app-backend-manageaze/](app-backend-manageaze/)`                      | yes   | `git@github.com:sdVakil/app-backend-manageaze.git`    | Saad V.  | `9417fe8` "back for rework"                                                          |
-| `[app-frontend-manageaze/](app-frontend-manageaze/)`                    | yes   | `git@github.com:sdVakil/app-frontend-manageaze.git`   | Saad V.  | `1a971c6` "Update chat-stream.js"                                                    |
-| `[manageaze-prototype/](manageaze-prototype/)`                          | yes   | `git@github.com:saadhsnain/manageaze.git`             | Saad H.  | `8d42a83` "feat: implement role-based dashboard summary cards and action workflows…" |
+
+| Folder                                               | Repo? | Remote                                              | Owner   | HEAD on `main`                                                                       |
+| ---------------------------------------------------- | ----- | --------------------------------------------------- | ------- | ------------------------------------------------------------------------------------ |
+| `[ManagEaze/](.)` (workspace root)                   | NO    | —                                                   | (us)    | —                                                                                    |
+| `[app-backend-manageaze/](app-backend-manageaze/)`   | yes   | `git@github.com:sdVakil/app-backend-manageaze.git`  | Saad V. | `9417fe8` "back for rework"                                                          |
+| `[app-frontend-manageaze/](app-frontend-manageaze/)` | yes   | `git@github.com:sdVakil/app-frontend-manageaze.git` | Saad V. | `1a971c6` "Update chat-stream.js"                                                    |
+| `[manageaze-prototype/](manageaze-prototype/)`       | yes   | `git@github.com:saadhsnain/manageaze.git`           | Saad H. | `8d42a83` "feat: implement role-based dashboard summary cards and action workflows…" |
+
 
 ### 7.2 Decision
 
 Adopt **Option B (git submodules)** with branch-tracking `main`. The umbrella stores only `.gitmodules` (URL + path + branch) and submodule pointer SHAs; sub-repo file contents are **never** committed to the umbrella. Daily workflow uses `git submodule update --remote --merge` (pull all linked repos) or `cd <subdir> && git pull` (one at a time).
 
 Rejected:
+
 - **Option A** (workspace + `.gitignore`) — no reproducibility, colleague has to manually clone three repos.
 - **Option C** (subtree) — imports the §1.4 leaked-secrets history into the umbrella.
 - **Option D** (flat monorepo) — abandons Saad's remotes; effectively forks the project.
@@ -795,27 +798,10 @@ PRD lives at the root; full plan + RFCs + decisions live in `docs/`.
 1. Add your SSH key to GitHub.
 2. Get read access to: sdVakil/app-backend-manageaze, sdVakil/app-frontend-manageaze, saadhsnain/manageaze (ask Aijaz to coordinate with Saad V. + Saad H.).
 3. Clone with submodules:
-   ```
-   git clone --recurse-submodules git@github.com:adeemadilkhatri/manageaze-workspace.git ManagEaze
-   cd ManagEaze
-   ```
-
-## Daily commands
-- Pull umbrella docs: `git pull`
-- Pull all sub-repos to latest `main`: `git submodule update --remote --merge`
-- Pull a single sub-repo: `cd <sub-repo> && git pull`
-- Commit umbrella docs: standard git workflow inside the umbrella, never inside a sub-repo
-- Commit sub-repo code: standard git workflow INSIDE the sub-repo (pushes to its own remote)
-
-## Where things live
-- Plan: `.cursor/plans/manageaze_multi-repo_governance_512af11b.plan.md`
-- Working agreement: `docs/WORKING-AGREEMENT.md`
-- Open questions for Saad V.: `docs/open-questions.md`
-- Phase tracker: `docs/phase.md`
-
-## Sub-repo workflow rules
-See `docs/WORKING-AGREEMENT.md`. Production repos are read-only until each phase is unlocked.
 ```
+
+   git clone --recurse-submodules [git@github.com](mailto:git@github.com):adeemadilkhatri/manageaze-workspace.git ManagEaze
+   cd ManagEaze
 
 ### 7.8 Phase upgrade triggers
 
@@ -826,11 +812,14 @@ See `docs/WORKING-AGREEMENT.md`. Production repos are read-only until each phase
 
 ### 7.9 Risks + mitigations
 
-| Risk                                                                                                | Mitigation                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Submodule pointer SHA goes stale, colleague clones an old state                                     | Each `.gitmodules` entry has `branch = main`; colleague runs `git submodule update --remote --merge` after clone                                                                 |
-| Saad V. force-pushes `main` on `sdVakil/*`, breaking submodule pointer history                      | Document in `docs/WORKING-AGREEMENT.md` that no-force-push is required on `main`; if it happens, run `git submodule sync && git submodule update --remote --merge --force` |
-| Adeem accidentally commits sub-repo file changes inside the umbrella (instead of inside sub-repo)   | `.gitignore` does not block this (submodules are tracked); rely on `git status` discipline + reviewer catches; CI lint can warn on changes outside `docs/`/`.cursor/`/PRD       |
-| Colleague forgets `--recurse-submodules`                                                            | README has it as the FIRST command; `git submodule update --init --recursive` is the recovery step                                                                               |
-| Leaked-secrets history in `sdVakil/*` is still cloneable via the submodule                          | Independent of this decision — Saad V. owns the scrub (§1.4 incident response); submodules don't worsen the exposure                                                              |
-| Adeem doesn't yet have write access to Saad's sub-repos                                             | For Phase 1 prototype edits, fork-and-PR via `saadhsnain/manageaze` until Saad H. adds Adeem as a collaborator; logged as an Aijaz-handshake action item                       |
+
+| Risk                                                                                              | Mitigation                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Submodule pointer SHA goes stale, colleague clones an old state                                   | Each `.gitmodules` entry has `branch = main`; colleague runs `git submodule update --remote --merge` after clone                                                           |
+| Saad V. force-pushes `main` on `sdVakil/`*, breaking submodule pointer history                    | Document in `docs/WORKING-AGREEMENT.md` that no-force-push is required on `main`; if it happens, run `git submodule sync && git submodule update --remote --merge --force` |
+| Adeem accidentally commits sub-repo file changes inside the umbrella (instead of inside sub-repo) | `.gitignore` does not block this (submodules are tracked); rely on `git status` discipline + reviewer catches; CI lint can warn on changes outside `docs/`/`.cursor/`/PRD  |
+| Colleague forgets `--recurse-submodules`                                                          | README has it as the FIRST command; `git submodule update --init --recursive` is the recovery step                                                                         |
+| Leaked-secrets history in `sdVakil/*` is still cloneable via the submodule                        | Independent of this decision — Saad V. owns the scrub (§1.4 incident response); submodules don't worsen the exposure                                                       |
+| Adeem doesn't yet have write access to Saad's sub-repos                                           | For Phase 1 prototype edits, fork-and-PR via `saadhsnain/manageaze` until Saad H. adds Adeem as a collaborator; logged as an Aijaz-handshake action item                   |
+
+
