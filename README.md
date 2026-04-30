@@ -45,4 +45,3 @@ It prints:
 - upstream tracking + ahead/behind counts
 - dirty files (if any)
 - current submodule pointer SHAs
-
