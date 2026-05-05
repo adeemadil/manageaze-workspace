@@ -1,0 +1,304 @@
+{
+  "screenshot": {
+    "name": "projects/7658565518051563232/files/dc5fc75e59094020bcd33083e390816c",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhYS7zu8WPH5byfPYIe4QKwSFvhB3ydNJNqvPUuEKFYt78aIwkQgJ4Ge-l3UvOOsW3naRwoTy-Ub7QKKJVdUFaxIiDogcW4-h1cx91gT-FTZ3CGfDqgW3pv0BwpkE3hQt-ofGNOhNd1H-P7G6f4Ik0ZB3Pm1W_WYIrEInfgx_nMMcmLBj-3OIqool-NQ-jYClx8GUriVlCq6WuG4ILXGDO9UhKs-oz7ktcSTo2D3TKhfZeAFbtb_Z0MRjw"
+  },
+  "htmlCode": {
+    "name": "projects/7658565518051563232/files/8ec03e5bae1645cab9adaf005c970487",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzg5ZDQyYjg4OWUzNzQ0Mjk5NmVmZDIxNDliYzBlZWRhEgsSBxDcsfL65xwYAZIBIwoKcHJvamVjdF9pZBIVQhM3NjU4NTY1NTE4MDUxNTYzMjMy&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "60ab21749365445aad1d490326523413",
+  "generatedBy": "figaro_agent",
+  "width": "780",
+  "height": "1832",
+  "title": "Comments - Full Sheet Typing",
+  "prompt": "Alternative mobile comments typing variant focused on full-screen immersion. \n- When typing begins, the sheet transitions into a full-screen view (92% height) with a more prominent composer area.\n- Includes a dedicated \"Pull to refresh\" indicator visible at the top of the comment thread.\n- Keyboard-aware positioning ensures the input stays visible above the keyboard.\n- Composer features a multiline input field that expands as the user types (up to 4 lines).\n- \"Send\" button state changes based on content presence.\n- Header persists with \"Comments\", a close icon, and sync status.\n- Maintain consistency with ManagEaze design tokens (colors, spacing, and radius).\n- Visual state: Show the input field with one line of text and the 'Send' button enabled.",
+  "name": "projects/7658565518051563232/screens/60ab21749365445aad1d490326523413",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "MANROPE",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#644AE4",
+    "headlineFont": "MANROPE",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "on_secondary_container": "#fffbff",
+      "secondary_container": "#7656fe",
+      "surface-bg-light": "#FAFAFA",
+      "sidebar-light": "#6E4CF5",
+      "primary_fixed": "#e5deff",
+      "on_secondary": "#ffffff",
+      "on_surface_variant": "#484555",
+      "error_container": "#ffdad6",
+      "missing-status": "#FFA800",
+      "sidebar-dark": "#6140E1",
+      "tertiary_fixed_dim": "#ffb68b",
+      "on_primary_fixed": "#190064",
+      "surface_container_lowest": "#ffffff",
+      "primary_container": "#644ae4",
+      "on_tertiary_container": "#ffdecc",
+      "surface_container_high": "#ebe6f3",
+      "primary": "#4b2bcb",
+      "tertiary_container": "#a44d00",
+      "on_error": "#ffffff",
+      "inverse_on_surface": "#f4eefc",
+      "surface_container_highest": "#e5e0ed",
+      "warning-urgent": "#FF0F00",
+      "on_secondary_fixed_variant": "#4711cf",
+      "surface_container_low": "#f7f1ff",
+      "surface_bright": "#fdf8ff",
+      "outline": "#787586",
+      "outline_variant": "#c9c4d7",
+      "on_primary_fixed_variant": "#4420c4",
+      "brand-primary-400": "#4523C8",
+      "brand-primary-50": "#C7C0FF",
+      "focus-ring-light": "#111827",
+      "on_primary": "#ffffff",
+      "on_primary_container": "#e7e1ff",
+      "tertiary": "#7f3a00",
+      "on_tertiary": "#ffffff",
+      "on_surface": "#1c1a23",
+      "on_error_container": "#93000a",
+      "primary_fixed_dim": "#c8bfff",
+      "secondary": "#5d37e4",
+      "on_tertiary_fixed": "#321300",
+      "focus-ring-ai": "#9333EA",
+      "info-standard": "#0085FF",
+      "surface-bg-dark": "#121217",
+      "secondary_fixed": "#e6deff",
+      "surface_dim": "#ddd8e5",
+      "surface_variant": "#e5e0ed",
+      "on_background": "#1c1a23",
+      "tertiary_fixed": "#ffdbc8",
+      "success-vibrant": "#61FF00",
+      "background": "#fdf8ff",
+      "surface_container": "#f1ecf9",
+      "inverse_surface": "#312f39",
+      "surface": "#fdf8ff",
+      "surface_tint": "#5c41dc",
+      "secondary_fixed_dim": "#cabeff",
+      "on_tertiary_fixed_variant": "#743400",
+      "on_secondary_fixed": "#1c0062",
+      "inverse_primary": "#c8bfff",
+      "error": "#ba1a1a"
+    },
+    "designMd": "---\ndesignSystem:\n  name: ManagEaze Unified Interface\n  style: Governance SaaS, clean enterprise surfaces with purple-led accent system\n  platforms:\n  - web\n  - mobile-web\n  - native-mobile\n  colorMode:\n    supported:\n    - light\n    - dark\n    default: light\ntokens:\n  color:\n    brand:\n      primary:\n        50: '#C7C0FF'\n        100: '#A599FA'\n        200: '#8471EF'\n        300: '#644AE4'\n        400: '#4523C8'\n      sidebarPrimaryLight: '#6E4CF5'\n      sidebarPrimaryDark: '#6140E1'\n    neutral:\n      50: '#FFFFFF'\n      100: '#E6E6E6'\n      200: '#B3B4B4'\n      300: '#999B9B'\n      400: '#808282'\n      500: '#666968'\n      600: '#4D504F'\n      700: '#333736'\n      800: '#1A1E1D'\n      900: '#000504'\n    semantic:\n      success:\n        50: '#EFFFE6'\n        300: '#81FF33'\n        400: '#61FF00'\n      warning:\n        50: '#FFE7E6'\n        100: '#FF9F99'\n        200: '#FF6F66'\n        300: '#FF271A'\n        400: '#FF0F00'\n      info:\n        100: '#B3DAFF'\n        200: '#80C2FF'\n        300: '#339DFF'\n        400: '#0085FF'\n      missing:\n        50: '#FFF6E6'\n        100: '#FFE5B3'\n        200: '#FFCB66'\n        300: '#FFB933'\n        400: '#FFA800'\n    chart:\n      light:\n        c1: '#E2795A'\n        c2: '#2A9B8A'\n        c3: '#264754'\n        c4: '#E9C466'\n        c5: '#F3A25A'\n      dark:\n        c1: '#3B82F6'\n        c2: '#34C48F'\n        c3: '#FB923C'\n        c4: '#B06BEB'\n        c5: '#EC4899'\n    surface:\n      light:\n        background: '#FAFAFA'\n        card: '#FFFFFF'\n        popover: '#FFFFFF'\n        sidebar: '#FFFFFF'\n        border: '#E5E7EB'\n        input: '#E5E7EB'\n      dark:\n        background: '#121217'\n        card: '#1F1F23'\n        popover: '#1F1F23'\n        sidebar: '#1F1F23'\n        border: '#34343A'\n        input: '#34343A'\n    text:\n      light:\n        primary: '#000504'\n        secondary: '#999B9B'\n        muted: '#6B7280'\n      dark:\n        primary: '#F2F2F2'\n        secondary: '#999B9B'\n        muted: '#A3A3A3'\n    focus:\n      ringLight: '#111827'\n      ringDark: '#6140E1'\n      aiInputFocus: '#9333EA'\n  typography:\n    families:\n      primary: DM Sans, Roboto Flex, -apple-system, BlinkMacSystemFont, Segoe UI,\n        sans-serif\n      mono: IBM Plex Mono, SFMono-Regular, Menlo, Monaco, Consolas, monospace\n    weight:\n      regular: 400\n      medium: 500\n      semibold: 600\n      bold: 700\n    scale:\n      h1:\n        size: 30px\n        lineHeight: 38px\n        weight: 700\n      h2:\n        size: 24px\n        lineHeight: 32px\n        weight: 600\n      h3:\n        size: 20px\n        lineHeight: 28px\n        weight: 600\n      h4:\n        size: 18px\n        lineHeight: 26px\n        weight: 600\n      body:\n        size: 14px\n        lineHeight: 22px\n        weight: 400\n      small:\n        size: 12px\n        lineHeight: 18px\n        weight: 400\n      caption:\n        size: 11px\n        lineHeight: 16px\n        weight: 400\n    letterSpacing:\n      normal: 0em\n  spacing:\n    baseUnit: 4\n    compactUnit: 4.48\n    scale:\n      1: 4px\n      2: 8px\n      3: 12px\n      4: 16px\n      5: 20px\n      6: 24px\n      8: 32px\n      10: 40px\n      12: 48px\n      16: 64px\n    container:\n      paddingInline: 32px\n      maxWidth: 1400px\n  radius:\n    base: 10.4px\n    sm: 6.4px\n    md: 8.4px\n    lg: 10.4px\n    xl: 16px\n    pill: 9999px\n  shadow:\n    light:\n      2xs: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.07)\n      xs: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.07)\n      sm: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 1px 2px -1px rgba(0, 0, 0,\n        0.14)\n      md: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 2px 4px -1px rgba(0, 0, 0,\n        0.14)\n      lg: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 4px 6px -1px rgba(0, 0, 0,\n        0.14)\n      xl: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 8px 10px -1px rgba(0, 0,\n        0, 0.14)\n      2xl: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.35)\n    dark:\n      sm: 0 1px 3px 0 rgba(0, 0, 0, 0.40), 0 1px 2px -1px rgba(0, 0, 0, 0.40)\n      md: 0 4px 6px -1px rgba(0, 0, 0, 0.40), 0 2px 4px -2px rgba(0, 0, 0, 0.40)\n      lg: 0 10px 15px -3px rgba(0, 0, 0, 0.40), 0 4px 6px -4px rgba(0, 0, 0, 0.40)\n      xl: 0 20px 25px -5px rgba(0, 0, 0, 0.40), 0 8px 10px -6px rgba(0, 0, 0, 0.40)\n  motion:\n    durations:\n      fast: 120ms\n      normal: 200ms\n      moderate: 300ms\n      slow: 500ms\n      shimmer: 2000ms\n    easing:\n      standard: ease\n      emphasized: cubic-bezier(0.2, 0.0, 0, 1.0)\n      inOut: ease-in-out\n      out: ease-out\n    patterns:\n      accordionOpen: height 200ms ease-out\n      accordionClose: height 200ms ease-out\n      shimmerSweep: translateX(-100%) -\u003e translateX(100%) over 2000ms infinite\n  breakpoints:\n    xs: 0px\n    sm: 600px\n    md: 960px\n    lg: 1280px\n    xl: 1920px\ncontentMax: 1400px\nname: ManagEaze Design System\ncolors:\n  surface: '#fdf8ff'\n  surface-dim: '#ddd8e5'\n  surface-bright: '#fdf8ff'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f1ff'\n  surface-container: '#f1ecf9'\n  surface-container-high: '#ebe6f3'\n  surface-container-highest: '#e5e0ed'\n  on-surface: '#1c1a23'\n  on-surface-variant: '#484555'\n  inverse-surface: '#312f39'\n  inverse-on-surface: '#f4eefc'\n  outline: '#787586'\n  outline-variant: '#c9c4d7'\n  surface-tint: '#5c41dc'\n  primary: '#4b2bcb'\n  on-primary: '#ffffff'\n  primary-container: '#644ae4'\n  on-primary-container: '#e7e1ff'\n  inverse-primary: '#c8bfff'\n  secondary: '#5d37e4'\n  on-secondary: '#ffffff'\n  secondary-container: '#7656fe'\n  on-secondary-container: '#fffbff'\n  tertiary: '#7f3a00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#a44d00'\n  on-tertiary-container: '#ffdecc'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5deff'\n  primary-fixed-dim: '#c8bfff'\n  on-primary-fixed: '#190064'\n  on-primary-fixed-variant: '#4420c4'\n  secondary-fixed: '#e6deff'\n  secondary-fixed-dim: '#cabeff'\n  on-secondary-fixed: '#1c0062'\n  on-secondary-fixed-variant: '#4711cf'\n  tertiary-fixed: '#ffdbc8'\n  tertiary-fixed-dim: '#ffb68b'\n  on-tertiary-fixed: '#321300'\n  on-tertiary-fixed-variant: '#743400'\n  background: '#fdf8ff'\n  on-background: '#1c1a23'\n  surface-variant: '#e5e0ed'\n  brand-primary-50: '#C7C0FF'\n  brand-primary-400: '#4523C8'\n  sidebar-light: '#6E4CF5'\n  sidebar-dark: '#6140E1'\n  success-vibrant: '#61FF00'\n  warning-urgent: '#FF0F00'\n  info-standard: '#0085FF'\n  missing-status: '#FFA800'\n  surface-bg-light: '#FAFAFA'\n  surface-bg-dark: '#121217'\n  focus-ring-light: '#111827'\n  focus-ring-ai: '#9333EA'\ntypography:\n  h1:\n    fontFamily: manrope\n    fontSize: 30px\n    fontWeight: '700'\n    lineHeight: 38px\n  h2:\n    fontFamily: manrope\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  h3:\n    fontFamily: manrope\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n  h4:\n    fontFamily: manrope\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 26px\n  body:\n    fontFamily: inter\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 22px\n  small:\n    fontFamily: inter\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 18px\n  caption:\n    fontFamily: inter\n    fontSize: 11px\n    fontWeight: '400'\n    lineHeight: 16px\n  mono:\n    fontFamily: IBM Plex Mono\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 20px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 4px\n  compact: 4.48px\n  xs: 8px\n  sm: 12px\n  md: 16px\n  lg: 24px\n  xl: 32px\n  container-max: 1400px\n  gutter: 32px\n---\n\n# Design Intent\n\n## Visual Atmosphere\n\nManagEaze should feel structured, policy-heavy, and trustworthy without looking cold. The visual language is clean enterprise with a purple command accent, generous whitespace, and restrained elevation. Surfaces stay mostly neutral so status colors and workflow actions are easy to scan.\n\n## Color Philosophy\n\nThe interface is anchored by deep neutrals and a vibrant violet primary. Success and warning states are intentionally high-contrast for governance workflows where missed cues create risk. Sidebars and selected states use lighter purple tints to preserve continuity without creating visual noise.\n\n## Typography Character\n\nBody text is compact and practical (14px default), tuned for dense tables, policy metadata, and side panels. Headings are semibold to bold with short line heights for hierarchy clarity. Monospace is reserved for technical or machine-like text fragments.\n\n## Layout Principles\n\n- Keep primary content in card-like surfaces with clear section boundaries.\n- Prefer predictable vertical rhythm and 8/16/24 spacing clusters.\n- Use the left rail as the operational anchor and avoid overloading top navigation.\n- Keep reading widths controlled in long-form policy content.\n\n## Component Styling Rules\n\n- **Buttons:** solid primary for main actions; subtle neutrals for secondary actions; destructive actions in warning-red family.\n- **Cards and panels:** rounded corners with soft layered shadow; avoid hard outlines unless showing focus/error.\n- **Inputs:** neutral border, clear focus ring, no noisy glow; preserve compact density.\n- **Status chips/tags:** color-coded, concise labels, consistent shape and padding.\n\n## Interaction Behavior\n\n- Motion should be functional and quick, mostly in 120-300ms ranges.\n- Expand/collapse transitions are smooth and understated.\n- Loading shimmer should indicate progress without distraction.\n- Focus states must be explicit across keyboard and touch workflows.\n\n## Accessibility and Readability\n\n- Maintain strong text-to-surface contrast in both light and dark themes.\n- Do not rely on color alone for state communication; pair with iconography or labels.\n- Preserve legible line-height for policy paragraphs and comments.\n- Support RTL content gracefully in rich text and comment views.\n\n## Responsive Adaptation Guidance\n\nOn mobile and narrow web widths, preserve hierarchy over parity: keep policy context visible, move secondary actions into sheets or segmented panels, and make comments a deliberate subflow (bottom sheet or dedicated route) rather than dense side-by-side desktop composition.\n\n## Expo React Native Web Variant\n\nUse this variant when generating screens/components specifically for Expo React Native Web. Token names are optimized for direct theme object usage (e.g., `theme.colors.bg`, `theme.spacing.md`, `theme.radius.lg`).\n\n```yaml\nexpoRnwVariant:\n  themeObject:\n    colors:\n      bg: \"#FAFAFA\"\n      bgDark: \"#121217\"\n      surface: \"#FFFFFF\"\n      surfaceDark: \"#1F1F23\"\n      text: \"#000504\"\n      textDark: \"#F2F2F2\"\n      textMuted: \"#999B9B\"\n      border: \"#E5E7EB\"\n      borderDark: \"#34343A\"\n      primary: \"#644AE4\"\n      primaryPressed: \"#4523C8\"\n      primarySoft: \"#C7C0FF\"\n      success: \"#61FF00\"\n      warning: \"#FF271A\"\n      info: \"#339DFF\"\n      focus: \"#9333EA\"\n      overlay: \"rgba(0, 5, 4, 0.56)\"\n\n    typography:\n      fontFamilySans: \"DM Sans\"\n      fontFamilyMono: \"IBM Plex Mono\"\n      size:\n        xs: 11\n        sm: 12\n        md: 14\n        lg: 18\n        xl: 24\n        xxl: 30\n      lineHeight:\n        xs: 16\n        sm: 18\n        md: 22\n        lg: 26\n        xl: 32\n        xxl: 38\n      weight:\n        regular: \"400\"\n        medium: \"500\"\n        semibold: \"600\"\n        bold: \"700\"\n\n    spacing:\n      xxs: 4\n      xs: 8\n      sm: 12\n      md: 16\n      lg: 24\n      xl: 32\n      xxl: 48\n      screenPad: 16\n      sectionGap: 24\n\n    radius:\n      sm: 6\n      md: 8\n      lg: 10\n      xl: 16\n      pill: 999\n\n    shadow:\n      card:\n        shadowColor: \"#000000\"\n        shadowOpacity: 0.14\n        shadowRadius: 5.5\n        shadowOffset:\n          width: 0.5\n          height: 1\n        elevation: 3\n      modal:\n        shadowColor: \"#000000\"\n        shadowOpacity: 0.35\n        shadowRadius: 10\n        shadowOffset:\n          width: 0.5\n          height: 8\n        elevation: 8\n\n    motion:\n      fastMs: 120\n      normalMs: 200\n      moderateMs: 300\n      slowMs: 500\n      shimmerMs: 2000\n\n    breakpoints:\n      phone: 0\n      tablet: 768\n      desktop: 1280\n      wide: 1440\n\n  componentGuidance:\n    button:\n      primary:\n        bg: \"colors.primary\"\n        text: \"#FFFFFF\"\n        radius: \"radius.md\"\n        minHeight: 44\n      secondary:\n        bg: \"colors.surface\"\n        text: \"colors.text\"\n        borderColor: \"colors.border\"\n        borderWidth: 1\n    card:\n      bg: \"colors.surface\"\n      radius: \"radius.lg\"\n      padding: \"spacing.md\"\n      shadow: \"shadow.card\"\n    input:\n      bg: \"colors.surface\"\n      text: \"colors.text\"\n      borderColor: \"colors.border\"\n      radius: \"radius.md\"\n      minHeight: 44\n      focusRingColor: \"colors.focus\"\n    bottomSheet:\n      bg: \"colors.surface\"\n      radiusTopLeft: \"radius.xl\"\n      radiusTopRight: \"radius.xl\"\n      dragHandleColor: \"colors.textMuted\"\n      overlayColor: \"colors.overlay\"\n\n  screenPatterns:\n    loginSignup:\n      layout: \"Centered form card on web; full-height stacked form on mobile.\"\n      maxWidth: 420\n    policyLibrary:\n      layout: \"Single-column list on mobile, two-pane support on tablet+.\"\n      itemDensity: \"compact\"\n    policyDetail:\n      layout: \"Header + metadata + content blocks; comments entry via CTA.\"\n    comments:\n      entryMode: \"Bottom sheet on phone, side panel on tablet/web.\"\n      composerSticky: true\n      threadOrder: \"newest-last\"\n```\n\n### Expo RNW Notes\n\n- Prefer RN primitives (`View`, `Text`, `Pressable`, `TextInput`, `FlatList`) and map these tokens into a single `theme.ts`.\n- Keep spacing and font sizing numeric for native compatibility.\n- Use bottom-sheet comments on mobile as the default interaction model for policy detail.\n- Keep API latency and offline behavior transparent with subtle stale-data labels, not blocking modals.",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#644AE4",
+    "overrideSecondaryColor": "#6E4CF5",
+    "spacingScale": 2,
+    "typography": {
+      "body": {
+        "fontFamily": "inter",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "22px"
+      },
+      "h3": {
+        "fontFamily": "manrope",
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "28px"
+      },
+      "mono": {
+        "fontFamily": "IBM Plex Mono",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "20px"
+      },
+      "h4": {
+        "fontFamily": "manrope",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "26px"
+      },
+      "small": {
+        "fontFamily": "inter",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "18px"
+      },
+      "caption": {
+        "fontFamily": "inter",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "lineHeight": "16px"
+      },
+      "h1": {
+        "fontFamily": "manrope",
+        "fontSize": "30px",
+        "fontWeight": "700",
+        "lineHeight": "38px"
+      },
+      "h2": {
+        "fontFamily": "manrope",
+        "fontSize": "24px",
+        "fontWeight": "600",
+        "lineHeight": "32px"
+      }
+    },
+    "spacing": {
+      "md": "16px",
+      "base": "4px",
+      "compact": "4.48px",
+      "sm": "12px",
+      "container-max": "1400px",
+      "gutter": "32px",
+      "xs": "8px",
+      "xl": "32px",
+      "lg": "24px"
+    }
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "designSystem": {
+    "name": "assets/ede512778b0841a59e8525ab84a6ccb7",
+    "designSystem": {
+      "displayName": "ManagEaze Design System",
+      "styleGuidelines": "## Brand & Style\n\nThe visual identity of this design system is rooted in a **Corporate / Modern** aesthetic, specifically tailored for high-stakes governance and policy management. It prioritizes structure and reliability without feeling clinical or cold. \n\nThe atmosphere is defined by:\n- **Governance-Grade Trust:** Clean enterprise surfaces that utilize generous whitespace to make complex information digestible.\n- **Command Accents:** A purple-led accent system that directs attention to primary actions while keeping the overall canvas neutral.\n- **Structured Clarity:** A disciplined approach to layout that favors functional scanning and clear section boundaries, ensuring missed cues are minimized in critical workflows.\n\n## Layout & Spacing\n\nThis system utilizes a **Fixed Grid** approach for web viewing while transitioning to a fluid model for mobile.\n\n- **Vertical Rhythm:** Layouts follow a predictable vertical rhythm based on 8/16/24px spacing clusters.\n- **The Left Rail:** The primary operational anchor. Top navigation should remain lightweight to avoid cognitive overload.\n- **Content Control:** For long-form policy reading, widths are strictly controlled to prevent excessive line lengths that hinder comprehension.\n- **Mobile Adaption:** On narrow viewports, the system prioritizes context over parity. Secondary actions move to bottom sheets or segmented panels rather than overcrowding the main view.\n\n## Elevation & Depth\n\nHierarchy is communicated through **Tonal Layers** and restrained **Ambient Shadows**.\n\n- **Surfaces:** Primary content lives on card-like surfaces with soft, layered shadows (0.5px to 1px offsets with wide blur radii) to create a subtle sense of stacking.\n- **Neutral Interaction:** The design avoids hard outlines for depth, opting instead for soft shadows. \n- **Focus States:** Depth is punctuated by explicit, high-contrast focus rings (dark neutral in light mode, primary violet in dark mode) to ensure keyboard navigation is unmistakable.\n- **Overlays:** Modals and popovers use a 56% opacity neutral overlay to dim the background, focusing all attention on the active task.\n\n## Components\n\n### Buttons\n- **Primary:** Solid primary purple with white text. Min-height of 44px for touch targets.\n- **Secondary:** Neutral surface with a subtle border and primary/text-primary label.\n- **Destructive:** Styled using the warning-red family for immediate risk communication.\n\n### Cards and Panels\n- Defined by a 10.4px radius and soft layered shadows.\n- Cards avoid hard outlines unless indicating a specific state (e.g., error or selection).\n\n### Input Fields\n- Neutral borders with a clear, explicit focus ring.\n- Designed for compact density; labels should be concise and metadata-driven.\n\n### Status Chips & Tags\n- Color-coded based on semantic status (Success, Warning, Info, Missing).\n- Consistent padding and pill-shaped geometry. Labels must be concise.\n\n### Bottom Sheets (Mobile)\n- The default interaction model for policy comments and secondary metadata on mobile.\n- Features a 16px top radius and a prominent drag handle in a muted neutral tone.\n\n### Interaction & Motion\n- **Speed:** Transitions are functional and quick (120ms-300ms).\n- **Feedback:** Use a subtle 2000ms shimmer sweep for loading states rather than aggressive spinners.\n- **Accordion:** Smooth height transitions (200ms ease-out) for expanding policy sections.",
+      "theme": {
+        "colorMode": "LIGHT",
+        "font": "MANROPE",
+        "roundness": "ROUND_EIGHT",
+        "customColor": "#644AE4",
+        "headlineFont": "MANROPE",
+        "bodyFont": "INTER",
+        "labelFont": "INTER",
+        "namedColors": {
+          "surface_dim": "#ddd8e5",
+          "surface-bg-dark": "#121217",
+          "secondary_fixed": "#e6deff",
+          "surface_variant": "#e5e0ed",
+          "on_error_container": "#93000a",
+          "on_surface": "#1c1a23",
+          "on_tertiary": "#ffffff",
+          "primary_fixed_dim": "#c8bfff",
+          "on_tertiary_fixed": "#321300",
+          "secondary": "#5d37e4",
+          "focus-ring-ai": "#9333EA",
+          "info-standard": "#0085FF",
+          "surface_container": "#f1ecf9",
+          "inverse_surface": "#312f39",
+          "on_tertiary_fixed_variant": "#743400",
+          "secondary_fixed_dim": "#cabeff",
+          "surface_tint": "#5c41dc",
+          "surface": "#fdf8ff",
+          "error": "#ba1a1a",
+          "on_secondary_fixed": "#1c0062",
+          "inverse_primary": "#c8bfff",
+          "on_background": "#1c1a23",
+          "tertiary_fixed": "#ffdbc8",
+          "success-vibrant": "#61FF00",
+          "background": "#fdf8ff",
+          "on_surface_variant": "#484555",
+          "tertiary_fixed_dim": "#ffb68b",
+          "sidebar-dark": "#6140E1",
+          "missing-status": "#FFA800",
+          "error_container": "#ffdad6",
+          "on_primary_fixed": "#190064",
+          "surface_container_lowest": "#ffffff",
+          "on_tertiary_container": "#ffdecc",
+          "primary_container": "#644ae4",
+          "on_secondary_container": "#fffbff",
+          "secondary_container": "#7656fe",
+          "sidebar-light": "#6E4CF5",
+          "surface-bg-light": "#FAFAFA",
+          "primary_fixed": "#e5deff",
+          "on_secondary": "#ffffff",
+          "surface_bright": "#fdf8ff",
+          "surface_container_low": "#f7f1ff",
+          "on_primary_container": "#e7e1ff",
+          "on_primary": "#ffffff",
+          "focus-ring-light": "#111827",
+          "brand-primary-50": "#C7C0FF",
+          "brand-primary-400": "#4523C8",
+          "outline_variant": "#c9c4d7",
+          "outline": "#787586",
+          "on_primary_fixed_variant": "#4420c4",
+          "tertiary": "#7f3a00",
+          "surface_container_high": "#ebe6f3",
+          "primary": "#4b2bcb",
+          "tertiary_container": "#a44d00",
+          "on_error": "#ffffff",
+          "inverse_on_surface": "#f4eefc",
+          "surface_container_highest": "#e5e0ed",
+          "warning-urgent": "#FF0F00",
+          "on_secondary_fixed_variant": "#4711cf"
+        },
+        "designMd": "---\ndesignSystem:\n  name: ManagEaze Unified Interface\n  style: Governance SaaS, clean enterprise surfaces with purple-led accent system\n  platforms:\n  - web\n  - mobile-web\n  - native-mobile\n  colorMode:\n    supported:\n    - light\n    - dark\n    default: light\ntokens:\n  color:\n    brand:\n      primary:\n        50: '#C7C0FF'\n        100: '#A599FA'\n        200: '#8471EF'\n        300: '#644AE4'\n        400: '#4523C8'\n      sidebarPrimaryLight: '#6E4CF5'\n      sidebarPrimaryDark: '#6140E1'\n    neutral:\n      50: '#FFFFFF'\n      100: '#E6E6E6'\n      200: '#B3B4B4'\n      300: '#999B9B'\n      400: '#808282'\n      500: '#666968'\n      600: '#4D504F'\n      700: '#333736'\n      800: '#1A1E1D'\n      900: '#000504'\n    semantic:\n      success:\n        50: '#EFFFE6'\n        300: '#81FF33'\n        400: '#61FF00'\n      warning:\n        50: '#FFE7E6'\n        100: '#FF9F99'\n        200: '#FF6F66'\n        300: '#FF271A'\n        400: '#FF0F00'\n      info:\n        100: '#B3DAFF'\n        200: '#80C2FF'\n        300: '#339DFF'\n        400: '#0085FF'\n      missing:\n        50: '#FFF6E6'\n        100: '#FFE5B3'\n        200: '#FFCB66'\n        300: '#FFB933'\n        400: '#FFA800'\n    chart:\n      light:\n        c1: '#E2795A'\n        c2: '#2A9B8A'\n        c3: '#264754'\n        c4: '#E9C466'\n        c5: '#F3A25A'\n      dark:\n        c1: '#3B82F6'\n        c2: '#34C48F'\n        c3: '#FB923C'\n        c4: '#B06BEB'\n        c5: '#EC4899'\n    surface:\n      light:\n        background: '#FAFAFA'\n        card: '#FFFFFF'\n        popover: '#FFFFFF'\n        sidebar: '#FFFFFF'\n        border: '#E5E7EB'\n        input: '#E5E7EB'\n      dark:\n        background: '#121217'\n        card: '#1F1F23'\n        popover: '#1F1F23'\n        sidebar: '#1F1F23'\n        border: '#34343A'\n        input: '#34343A'\n    text:\n      light:\n        primary: '#000504'\n        secondary: '#999B9B'\n        muted: '#6B7280'\n      dark:\n        primary: '#F2F2F2'\n        secondary: '#999B9B'\n        muted: '#A3A3A3'\n    focus:\n      ringLight: '#111827'\n      ringDark: '#6140E1'\n      aiInputFocus: '#9333EA'\n  typography:\n    families:\n      primary: DM Sans, Roboto Flex, -apple-system, BlinkMacSystemFont, Segoe UI,\n        sans-serif\n      mono: IBM Plex Mono, SFMono-Regular, Menlo, Monaco, Consolas, monospace\n    weight:\n      regular: 400\n      medium: 500\n      semibold: 600\n      bold: 700\n    scale:\n      h1:\n        size: 30px\n        lineHeight: 38px\n        weight: 700\n      h2:\n        size: 24px\n        lineHeight: 32px\n        weight: 600\n      h3:\n        size: 20px\n        lineHeight: 28px\n        weight: 600\n      h4:\n        size: 18px\n        lineHeight: 26px\n        weight: 600\n      body:\n        size: 14px\n        lineHeight: 22px\n        weight: 400\n      small:\n        size: 12px\n        lineHeight: 18px\n        weight: 400\n      caption:\n        size: 11px\n        lineHeight: 16px\n        weight: 400\n    letterSpacing:\n      normal: 0em\n  spacing:\n    baseUnit: 4\n    compactUnit: 4.48\n    scale:\n      1: 4px\n      2: 8px\n      3: 12px\n      4: 16px\n      5: 20px\n      6: 24px\n      8: 32px\n      10: 40px\n      12: 48px\n      16: 64px\n    container:\n      paddingInline: 32px\n      maxWidth: 1400px\n  radius:\n    base: 10.4px\n    sm: 6.4px\n    md: 8.4px\n    lg: 10.4px\n    xl: 16px\n    pill: 9999px\n  shadow:\n    light:\n      2xs: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.07)\n      xs: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.07)\n      sm: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 1px 2px -1px rgba(0, 0, 0,\n        0.14)\n      md: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 2px 4px -1px rgba(0, 0, 0,\n        0.14)\n      lg: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 4px 6px -1px rgba(0, 0, 0,\n        0.14)\n      xl: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.14), 0.5px 8px 10px -1px rgba(0, 0,\n        0, 0.14)\n      2xl: 0.5px 1px 5.5px 0px rgba(0, 0, 0, 0.35)\n    dark:\n      sm: 0 1px 3px 0 rgba(0, 0, 0, 0.40), 0 1px 2px -1px rgba(0, 0, 0, 0.40)\n      md: 0 4px 6px -1px rgba(0, 0, 0, 0.40), 0 2px 4px -2px rgba(0, 0, 0, 0.40)\n      lg: 0 10px 15px -3px rgba(0, 0, 0, 0.40), 0 4px 6px -4px rgba(0, 0, 0, 0.40)\n      xl: 0 20px 25px -5px rgba(0, 0, 0, 0.40), 0 8px 10px -6px rgba(0, 0, 0, 0.40)\n  motion:\n    durations:\n      fast: 120ms\n      normal: 200ms\n      moderate: 300ms\n      slow: 500ms\n      shimmer: 2000ms\n    easing:\n      standard: ease\n      emphasized: cubic-bezier(0.2, 0.0, 0, 1.0)\n      inOut: ease-in-out\n      out: ease-out\n    patterns:\n      accordionOpen: height 200ms ease-out\n      accordionClose: height 200ms ease-out\n      shimmerSweep: translateX(-100%) -\u003e translateX(100%) over 2000ms infinite\n  breakpoints:\n    xs: 0px\n    sm: 600px\n    md: 960px\n    lg: 1280px\n    xl: 1920px\ncontentMax: 1400px\nname: ManagEaze Design System\ncolors:\n  surface: '#fdf8ff'\n  surface-dim: '#ddd8e5'\n  surface-bright: '#fdf8ff'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f1ff'\n  surface-container: '#f1ecf9'\n  surface-container-high: '#ebe6f3'\n  surface-container-highest: '#e5e0ed'\n  on-surface: '#1c1a23'\n  on-surface-variant: '#484555'\n  inverse-surface: '#312f39'\n  inverse-on-surface: '#f4eefc'\n  outline: '#787586'\n  outline-variant: '#c9c4d7'\n  surface-tint: '#5c41dc'\n  primary: '#4b2bcb'\n  on-primary: '#ffffff'\n  primary-container: '#644ae4'\n  on-primary-container: '#e7e1ff'\n  inverse-primary: '#c8bfff'\n  secondary: '#5d37e4'\n  on-secondary: '#ffffff'\n  secondary-container: '#7656fe'\n  on-secondary-container: '#fffbff'\n  tertiary: '#7f3a00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#a44d00'\n  on-tertiary-container: '#ffdecc'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5deff'\n  primary-fixed-dim: '#c8bfff'\n  on-primary-fixed: '#190064'\n  on-primary-fixed-variant: '#4420c4'\n  secondary-fixed: '#e6deff'\n  secondary-fixed-dim: '#cabeff'\n  on-secondary-fixed: '#1c0062'\n  on-secondary-fixed-variant: '#4711cf'\n  tertiary-fixed: '#ffdbc8'\n  tertiary-fixed-dim: '#ffb68b'\n  on-tertiary-fixed: '#321300'\n  on-tertiary-fixed-variant: '#743400'\n  background: '#fdf8ff'\n  on-background: '#1c1a23'\n  surface-variant: '#e5e0ed'\n  brand-primary-50: '#C7C0FF'\n  brand-primary-400: '#4523C8'\n  sidebar-light: '#6E4CF5'\n  sidebar-dark: '#6140E1'\n  success-vibrant: '#61FF00'\n  warning-urgent: '#FF0F00'\n  info-standard: '#0085FF'\n  missing-status: '#FFA800'\n  surface-bg-light: '#FAFAFA'\n  surface-bg-dark: '#121217'\n  focus-ring-light: '#111827'\n  focus-ring-ai: '#9333EA'\ntypography:\n  h1:\n    fontFamily: manrope\n    fontSize: 30px\n    fontWeight: '700'\n    lineHeight: 38px\n  h2:\n    fontFamily: manrope\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  h3:\n    fontFamily: manrope\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n  h4:\n    fontFamily: manrope\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 26px\n  body:\n    fontFamily: inter\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 22px\n  small:\n    fontFamily: inter\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: 18px\n  caption:\n    fontFamily: inter\n    fontSize: 11px\n    fontWeight: '400'\n    lineHeight: 16px\n  mono:\n    fontFamily: IBM Plex Mono\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 20px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 4px\n  compact: 4.48px\n  xs: 8px\n  sm: 12px\n  md: 16px\n  lg: 24px\n  xl: 32px\n  container-max: 1400px\n  gutter: 32px\n---\n\n# Design Intent\n\n## Visual Atmosphere\n\nManagEaze should feel structured, policy-heavy, and trustworthy without looking cold. The visual language is clean enterprise with a purple command accent, generous whitespace, and restrained elevation. Surfaces stay mostly neutral so status colors and workflow actions are easy to scan.\n\n## Color Philosophy\n\nThe interface is anchored by deep neutrals and a vibrant violet primary. Success and warning states are intentionally high-contrast for governance workflows where missed cues create risk. Sidebars and selected states use lighter purple tints to preserve continuity without creating visual noise.\n\n## Typography Character\n\nBody text is compact and practical (14px default), tuned for dense tables, policy metadata, and side panels. Headings are semibold to bold with short line heights for hierarchy clarity. Monospace is reserved for technical or machine-like text fragments.\n\n## Layout Principles\n\n- Keep primary content in card-like surfaces with clear section boundaries.\n- Prefer predictable vertical rhythm and 8/16/24 spacing clusters.\n- Use the left rail as the operational anchor and avoid overloading top navigation.\n- Keep reading widths controlled in long-form policy content.\n\n## Component Styling Rules\n\n- **Buttons:** solid primary for main actions; subtle neutrals for secondary actions; destructive actions in warning-red family.\n- **Cards and panels:** rounded corners with soft layered shadow; avoid hard outlines unless showing focus/error.\n- **Inputs:** neutral border, clear focus ring, no noisy glow; preserve compact density.\n- **Status chips/tags:** color-coded, concise labels, consistent shape and padding.\n\n## Interaction Behavior\n\n- Motion should be functional and quick, mostly in 120-300ms ranges.\n- Expand/collapse transitions are smooth and understated.\n- Loading shimmer should indicate progress without distraction.\n- Focus states must be explicit across keyboard and touch workflows.\n\n## Accessibility and Readability\n\n- Maintain strong text-to-surface contrast in both light and dark themes.\n- Do not rely on color alone for state communication; pair with iconography or labels.\n- Preserve legible line-height for policy paragraphs and comments.\n- Support RTL content gracefully in rich text and comment views.\n\n## Responsive Adaptation Guidance\n\nOn mobile and narrow web widths, preserve hierarchy over parity: keep policy context visible, move secondary actions into sheets or segmented panels, and make comments a deliberate subflow (bottom sheet or dedicated route) rather than dense side-by-side desktop composition.\n\n## Expo React Native Web Variant\n\nUse this variant when generating screens/components specifically for Expo React Native Web. Token names are optimized for direct theme object usage (e.g., `theme.colors.bg`, `theme.spacing.md`, `theme.radius.lg`).\n\n```yaml\nexpoRnwVariant:\n  themeObject:\n    colors:\n      bg: \"#FAFAFA\"\n      bgDark: \"#121217\"\n      surface: \"#FFFFFF\"\n      surfaceDark: \"#1F1F23\"\n      text: \"#000504\"\n      textDark: \"#F2F2F2\"\n      textMuted: \"#999B9B\"\n      border: \"#E5E7EB\"\n      borderDark: \"#34343A\"\n      primary: \"#644AE4\"\n      primaryPressed: \"#4523C8\"\n      primarySoft: \"#C7C0FF\"\n      success: \"#61FF00\"\n      warning: \"#FF271A\"\n      info: \"#339DFF\"\n      focus: \"#9333EA\"\n      overlay: \"rgba(0, 5, 4, 0.56)\"\n\n    typography:\n      fontFamilySans: \"DM Sans\"\n      fontFamilyMono: \"IBM Plex Mono\"\n      size:\n        xs: 11\n        sm: 12\n        md: 14\n        lg: 18\n        xl: 24\n        xxl: 30\n      lineHeight:\n        xs: 16\n        sm: 18\n        md: 22\n        lg: 26\n        xl: 32\n        xxl: 38\n      weight:\n        regular: \"400\"\n        medium: \"500\"\n        semibold: \"600\"\n        bold: \"700\"\n\n    spacing:\n      xxs: 4\n      xs: 8\n      sm: 12\n      md: 16\n      lg: 24\n      xl: 32\n      xxl: 48\n      screenPad: 16\n      sectionGap: 24\n\n    radius:\n      sm: 6\n      md: 8\n      lg: 10\n      xl: 16\n      pill: 999\n\n    shadow:\n      card:\n        shadowColor: \"#000000\"\n        shadowOpacity: 0.14\n        shadowRadius: 5.5\n        shadowOffset:\n          width: 0.5\n          height: 1\n        elevation: 3\n      modal:\n        shadowColor: \"#000000\"\n        shadowOpacity: 0.35\n        shadowRadius: 10\n        shadowOffset:\n          width: 0.5\n          height: 8\n        elevation: 8\n\n    motion:\n      fastMs: 120\n      normalMs: 200\n      moderateMs: 300\n      slowMs: 500\n      shimmerMs: 2000\n\n    breakpoints:\n      phone: 0\n      tablet: 768\n      desktop: 1280\n      wide: 1440\n\n  componentGuidance:\n    button:\n      primary:\n        bg: \"colors.primary\"\n        text: \"#FFFFFF\"\n        radius: \"radius.md\"\n        minHeight: 44\n      secondary:\n        bg: \"colors.surface\"\n        text: \"colors.text\"\n        borderColor: \"colors.border\"\n        borderWidth: 1\n    card:\n      bg: \"colors.surface\"\n      radius: \"radius.lg\"\n      padding: \"spacing.md\"\n      shadow: \"shadow.card\"\n    input:\n      bg: \"colors.surface\"\n      text: \"colors.text\"\n      borderColor: \"colors.border\"\n      radius: \"radius.md\"\n      minHeight: 44\n      focusRingColor: \"colors.focus\"\n    bottomSheet:\n      bg: \"colors.surface\"\n      radiusTopLeft: \"radius.xl\"\n      radiusTopRight: \"radius.xl\"\n      dragHandleColor: \"colors.textMuted\"\n      overlayColor: \"colors.overlay\"\n\n  screenPatterns:\n    loginSignup:\n      layout: \"Centered form card on web; full-height stacked form on mobile.\"\n      maxWidth: 420\n    policyLibrary:\n      layout: \"Single-column list on mobile, two-pane support on tablet+.\"\n      itemDensity: \"compact\"\n    policyDetail:\n      layout: \"Header + metadata + content blocks; comments entry via CTA.\"\n    comments:\n      entryMode: \"Bottom sheet on phone, side panel on tablet/web.\"\n      composerSticky: true\n      threadOrder: \"newest-last\"\n```\n\n### Expo RNW Notes\n\n- Prefer RN primitives (`View`, `Text`, `Pressable`, `TextInput`, `FlatList`) and map these tokens into a single `theme.ts`.\n- Keep spacing and font sizing numeric for native compatibility.\n- Use bottom-sheet comments on mobile as the default interaction model for policy detail.\n- Keep API latency and offline behavior transparent with subtle stale-data labels, not blocking modals.",
+        "colorVariant": "FIDELITY",
+        "overridePrimaryColor": "#644AE4",
+        "overrideSecondaryColor": "#6E4CF5",
+        "spacingScale": 2,
+        "typography": {
+          "body": {
+            "fontFamily": "inter",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "22px"
+          },
+          "h3": {
+            "fontFamily": "manrope",
+            "fontSize": "20px",
+            "fontWeight": "600",
+            "lineHeight": "28px"
+          },
+          "mono": {
+            "fontFamily": "IBM Plex Mono",
+            "fontSize": "13px",
+            "fontWeight": "400",
+            "lineHeight": "20px"
+          },
+          "h4": {
+            "fontFamily": "manrope",
+            "fontSize": "18px",
+            "fontWeight": "600",
+            "lineHeight": "26px"
+          },
+          "small": {
+            "fontFamily": "inter",
+            "fontSize": "12px",
+            "fontWeight": "400",
+            "lineHeight": "18px"
+          },
+          "caption": {
+            "fontFamily": "inter",
+            "fontSize": "11px",
+            "fontWeight": "400",
+            "lineHeight": "16px"
+          },
+          "h1": {
+            "fontFamily": "manrope",
+            "fontSize": "30px",
+            "fontWeight": "700",
+            "lineHeight": "38px"
+          },
+          "h2": {
+            "fontFamily": "manrope",
+            "fontSize": "24px",
+            "fontWeight": "600",
+            "lineHeight": "32px"
+          }
+        },
+        "spacing": {
+          "xl": "32px",
+          "lg": "24px",
+          "container-max": "1400px",
+          "sm": "12px",
+          "xs": "8px",
+          "gutter": "32px",
+          "compact": "4.48px",
+          "md": "16px",
+          "base": "4px"
+        }
+      }
+    },
+    "version": "1"
+  }
+}

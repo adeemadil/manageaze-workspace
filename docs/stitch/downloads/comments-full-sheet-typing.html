@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ManagEaze - Comments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f7f1ff",
+                        "focus-ring-light": "#111827",
+                        "surface-container-highest": "#e5e0ed",
+                        "on-error-container": "#93000a",
+                        "surface-bg-light": "#FAFAFA",
+                        "tertiary-fixed-dim": "#ffb68b",
+                        "brand-primary-50": "#C7C0FF",
+                        "inverse-surface": "#312f39",
+                        "primary-fixed": "#e5deff",
+                        "on-background": "#1c1a23",
+                        "surface-variant": "#e5e0ed",
+                        "on-primary-fixed-variant": "#4420c4",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fdf8ff",
+                        "on-error": "#ffffff",
+                        "info-standard": "#0085FF",
+                        "warning-urgent": "#FF0F00",
+                        "surface-bright": "#fdf8ff",
+                        "on-secondary-fixed-variant": "#4711cf",
+                        "surface-dim": "#ddd8e5",
+                        "secondary-fixed-dim": "#cabeff",
+                        "on-tertiary-fixed-variant": "#743400",
+                        "on-secondary-fixed": "#1c0062",
+                        "primary-container": "#644ae4",
+                        "secondary": "#5d37e4",
+                        "sidebar-dark": "#6140E1",
+                        "on-tertiary-container": "#ffdecc",
+                        "missing-status": "#FFA800",
+                        "surface-container-high": "#ebe6f3",
+                        "on-surface-variant": "#484555",
+                        "primary-fixed-dim": "#c8bfff",
+                        "on-tertiary-fixed": "#321300",
+                        "tertiary-fixed": "#ffdbc8",
+                        "tertiary": "#7f3a00",
+                        "surface-tint": "#5c41dc",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f4eefc",
+                        "surface-bg-dark": "#121217",
+                        "success-vibrant": "#61FF00",
+                        "outline": "#787586",
+                        "secondary-fixed": "#e6deff",
+                        "focus-ring-ai": "#9333EA",
+                        "outline-variant": "#c9c4d7",
+                        "tertiary-container": "#a44d00",
+                        "background": "#fdf8ff",
+                        "brand-primary-400": "#4523C8",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#e7e1ff",
+                        "sidebar-light": "#6E4CF5",
+                        "secondary-container": "#7656fe",
+                        "primary": "#4b2bcb",
+                        "on-surface": "#1c1a23",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f1ecf9",
+                        "on-primary-fixed": "#190064",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "inverse-primary": "#c8bfff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1400px",
+                        "sm": "12px",
+                        "lg": "24px",
+                        "compact": "4.48px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "gutter": "32px",
+                        "base": "4px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "h4": ["manrope"],
+                        "h3": ["manrope"],
+                        "small": ["inter"],
+                        "caption": ["inter"],
+                        "h2": ["manrope"],
+                        "h1": ["manrope"],
+                        "body": ["inter"],
+                        "mono": ["IBM Plex Mono"]
+                    },
+                    "fontSize": {
+                        "h4": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+                        "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "small": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+                        "caption": ["11px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "h2": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "h1": ["30px", {"lineHeight": "38px", "fontWeight": "700"}],
+                        "body": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                        "mono": ["13px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black text-on-background font-body min-h-screen flex justify-center overflow-hidden">
+<!-- Mock Device Frame (Mobile Context) -->
+<div class="relative w-full max-w-md h-[884px] bg-surface flex flex-col shadow-2xl overflow-hidden mt-8 rounded-t-[32px] md:rounded-[32px] md:h-[850px] md:my-auto md:border md:border-outline-variant">
+<!-- Dimmed Background Context (Simulating a page behind the modal) -->
+<div class="absolute inset-0 bg-surface-container-high opacity-40 z-0"></div>
+<!-- Full Screen Comments Sheet (Active Typing State) -->
+<!-- Translates to 92% height or full on very small screens -->
+<div class="absolute bottom-0 left-0 right-0 h-[92%] bg-surface rounded-t-[16px] shadow-[0_-8px_24px_rgba(0,0,0,0.1)] flex flex-col z-10 transition-transform duration-300 transform translate-y-0">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center pt-3 pb-1">
+<div class="w-10 h-1 bg-outline-variant rounded-full"></div>
+</div>
+<!-- Header -->
+<div class="flex items-center justify-between px-md py-sm border-b border-surface-variant bg-surface sticky top-0 z-20">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="cloud_sync">cloud_sync</span>
+<span class="font-small text-small text-on-surface-variant">Saved just now</span>
+</div>
+<h3 class="font-h4 text-h4 text-on-surface absolute left-1/2 transform -translate-x-1/2">Comments</h3>
+<button class="p-xs hover:bg-surface-container rounded-full text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[24px]" data-icon="close">close</span>
+</button>
+</div>
+<!-- Comment Thread Area -->
+<div class="flex-1 overflow-y-auto px-md py-lg flex flex-col gap-lg bg-surface">
+<!-- Pull to refresh indicator -->
+<div class="flex justify-center items-center gap-2 text-outline pb-4 opacity-70">
+<span class="material-symbols-outlined text-[16px] animate-spin" data-icon="sync">sync</span>
+<span class="font-small text-small">Release to refresh...</span>
+</div>
+<!-- Existing Comment 1 -->
+<div class="flex gap-sm">
+<img alt="Avatar" class="w-8 h-8 rounded-full border border-surface-variant" data-alt="A small circular profile picture of a professional woman with dark hair against a clean, light mode office background, maintaining a corporate governance aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnUEKVObOVmIW3GuMqdKhkq9b-NXq4qgUPq_By-5qoRFDyzlA79pXxiMIizEIQutyVVKsFN5EJ9qi0-vm3_XcPb5ul8FSDy5CMOgyfClayMvapozAlo3CxQAR0C8tvlrjem8-kDA-QwMDOnr6KquaBi_uTvZmyQUBT_TcCF05xNG2ruMOtBEzJiadQNOBvigz9bYtwDAQkYcE-A4W9vGYYHjeBN5UiApzhulpF-VQlK52z51Os8TfbY8RZti2aTX39Fd1lrzPlrX4"/>
+<div class="flex-1">
+<div class="flex items-baseline gap-xs mb-1">
+<span class="font-body text-body font-semibold text-on-surface">Sarah Jenkins</span>
+<span class="font-small text-small text-on-surface-variant">2h ago</span>
+</div>
+<p class="font-body text-body text-on-surface-variant bg-surface-container-low p-3 rounded-lg rounded-tl-none border border-surface-variant shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+                            Can we clarify section 4.2 regarding external auditor access? It seems overly restrictive given the new compliance mandates.
+                        </p>
+</div>
+</div>
+<!-- Existing Comment 2 -->
+<div class="flex gap-sm">
+<img alt="Avatar" class="w-8 h-8 rounded-full border border-surface-variant" data-alt="A small circular profile picture of a professional man with a neat beard, wearing a light shirt, fitting a modern enterprise software UI aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqjRHCNQH-kRLVt_7UsG_MCaDXKlCWdo_lvGJ5MA9FJ7U4fS1UEjZukQs6A88LstmaB1z7ylu6W9MCsHa0bOcgpEhCQoyBsCd8QKNqhziNt_a3KppXyb8t2BwOISuR-_jZNp05d_U1_ydioyBhr2XO8crgA6S7x4eK_LXSNUz6VJpAPRM5xFXKYJiZoh1RZpd_J91RgR7znN3mM0uo5fbTGRChbwTXY32zWmw9LSuTgKbm3yuKFevF9WD4X01f2DTweuQQzB18M8Y"/>
+<div class="flex-1">
+<div class="flex items-baseline gap-xs mb-1">
+<span class="font-body text-body font-semibold text-on-surface">David Chen</span>
+<span class="font-small text-small text-on-surface-variant">45m ago</span>
+</div>
+<p class="font-body text-body text-on-surface-variant bg-surface-container-low p-3 rounded-lg rounded-tl-none border border-surface-variant shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+                            Agreed. I've flagged this for review in the next sprint. Let's aim to have a draft revision by Thursday.
+                        </p>
+</div>
+</div>
+<!-- Empty space to ensure scrollability to bottom -->
+<div class="h-12"></div>
+</div>
+<!-- Composer Area (Keyboard Aware Positioned) -->
+<!-- Highlighted/Active State -->
+<div class="border-t border-surface-variant bg-surface p-md pb-safe shadow-[0_-4px_12px_rgba(0,0,0,0.03)] sticky bottom-0 z-20">
+<!-- Typing Indicator Context -->
+<div class="flex items-center gap-2 mb-2 px-1">
+<span class="font-small text-small text-primary font-medium">Replying to David Chen...</span>
+</div>
+<div class="flex items-end gap-sm">
+<!-- Expanded Input Field -->
+<div class="flex-1 bg-surface-container-highest rounded-xl border border-primary focus-within:ring-2 focus-within:ring-focus-ring-light focus-within:border-transparent transition-all overflow-hidden flex flex-col justify-end min-h-[44px]">
+<textarea autofocus="" class="w-full bg-transparent border-none focus:ring-0 font-body text-body text-on-surface placeholder:text-outline p-3 resize-none outline-none leading-relaxed" placeholder="Add a comment..." rows="1">I will prepare the draft revision right aw</textarea>
+</div>
+<!-- Send Button (Enabled State) -->
+<button class="w-11 h-11 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-sm hover:bg-primary/90 transition-colors flex-shrink-0 active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="send">send</span>
+</button>
+</div>
+</div>
+<!-- Simulated Keyboard Area (To illustrate the active typing context) -->
+<div class="h-[280px] bg-surface-container-low border-t border-surface-variant flex items-center justify-center opacity-80 shrink-0">
+<span class="font-small text-small text-outline">[System Keyboard Area]</span>
+</div>
+</div>
+</div>
+</body></html>
