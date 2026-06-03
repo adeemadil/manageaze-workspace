@@ -1,0 +1,13 @@
+ManagEaze Policy Management System — Stitch assets (reference)
+
+Project numeric ID: 7658565518051563232
+
+Screens to fetch via Stitch MCP (tool name may be prefixed, e.g. stitch:get_screen):
+1) Policy Detail - Polished Final — screen id: 590ff599d6824db7b425d7bf46b7dbba
+2) Policy Library - Polished Final — screen id: 9605b3b278804d38a08a106a19ce6c9d
+
+How to download HTML/screenshots:
+- With Stitch MCP enabled in Cursor (see repo root .cursor/mcp.json + MANAGEAZE_STITCH_API_KEY), call get_screen with projectId and screenId (numeric IDs only per Stitch docs).
+- Response includes screenshot.downloadUrl and htmlCode.downloadUrl (short-lived signed URLs). Fetch those immediately with curl -L or web_fetch and save under docs/stitch/downloads/.
+
+There is no stable public REST URL for these screens without MCP; curl alone needs the signed URLs from get_screen first.
